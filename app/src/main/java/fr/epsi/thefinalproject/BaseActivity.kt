@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class BaseActivity : AppCompatActivity() {
+open class BaseActivity : AppCompatActivity() {
     fun showBtnBack(){
         val imageViewBack = findViewById<ImageView>(R.id.imageViewHeaderGoBackImage)
         imageViewBack.visibility = View.VISIBLE

@@ -6,16 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".SplashActivity">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Loading"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="match_parent"
+        android:padding="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/epsi_logo"
+        android:contentDescription="@string/splash_logo_epsi"/>
 
     <ProgressBar
         style="?android:attr/progressBarStyle"

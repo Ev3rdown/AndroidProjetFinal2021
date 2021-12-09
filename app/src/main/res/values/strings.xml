@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">The Final Project</string>
     <string name="go_back_arrow">Go-back arrow</string>
+    <string name="epsi">Epsi</string>
+    <string name="txt_zone_1">Zone 1</string>
+    <string name="txt_zone_2">Zone 2</string>
+    <string name="splash_logo_epsi">Logo EPSI while loading</string>
 </resources>
