@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header"
+        android:transitionName="TopBar"
+        android:id="@+id/layout_header"
+        />
+
+    <ImageView
+        android:id="@+id/imageViewStudentAvatar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/avatar_icon"
+        android:maxHeight="500dp"
+        android:contentDescription="@string/avatar_description"/>
+
+    <TextView
+        android:id="@+id/textViewStudentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/textViewStudentMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        />
+    <TextView
+        android:id="@+id/textViewStudentGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:textSize="18sp"
+        />
+
+
+</LinearLayout>

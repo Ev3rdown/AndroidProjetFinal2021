@@ -11,7 +11,15 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- enable window content transitions
+        I only created the start transition, not the exit one as it would have been a waste of time since it's not that bad when using the go-back
+        -->
+        <item name="android:windowActivityTransitions">true</item>
+
         <!-- Customize your theme here. -->
+    </style>
+    <style name="RoundedButtonGroup" parent="RoundedButton">
+        <item name="iconSize">40dp</item>
     </style>
     <style name="RoundedButton" parent="Widget.MaterialComponents.Button">
         <item name="shapeAppearanceOverlay">@style/RoundShape</item>

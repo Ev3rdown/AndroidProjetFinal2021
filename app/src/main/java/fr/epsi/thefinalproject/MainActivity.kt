@@ -1,9 +1,11 @@
 package fr.epsi.thefinalproject
 
-import androidx.appcompat.app.AppCompatActivity
+import android.app.ActivityOptions
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+
 
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,8 +18,9 @@ class MainActivity : BaseActivity() {
         val buttonZone2: Button = findViewById(R.id.buttonZone2)
 
         buttonZone1.setOnClickListener(View.OnClickListener {
-            //val intent = Intent(application, CreateActivity::class.java)
-            //startActivity(intent)
+            val intent = Intent(application, GroupActivity::class.java)
+            val options = ActivityOptions.makeSceneTransitionAnimation(this,findViewById(R.id.layout_header),"TopBar").toBundle()
+            startActivity(intent,options)
         })
         buttonZone2.setOnClickListener(View.OnClickListener {
             //val intent = Intent(application, CreateActivity::class.java)

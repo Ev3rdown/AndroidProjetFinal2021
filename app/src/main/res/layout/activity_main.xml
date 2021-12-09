@@ -8,9 +8,11 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
     <include
+        android:id="@+id/layout_header"
         layout="@layout/layout_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:transitionName="TopBar"
         />
 
     <View

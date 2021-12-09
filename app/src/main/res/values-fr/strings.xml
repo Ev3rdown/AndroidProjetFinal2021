@@ -6,4 +6,7 @@
     <string name="txt_zone_1">Zone 1</string>
     <string name="txt_zone_2">Zone 2</string>
     <string name="splash_logo_epsi">Logo EPSI while loading</string>
+    <string name="txt_zone_group">Group</string>
+    <string name="yoann">Yoann</string>
+    <string name="avatar_description">Student\'s avatar picture</string>
 </resources>
