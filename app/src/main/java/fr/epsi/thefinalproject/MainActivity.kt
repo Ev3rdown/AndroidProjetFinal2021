@@ -17,15 +17,15 @@ class MainActivity : BaseActivity() {
         val buttonZone1: Button = findViewById(R.id.buttonZone1)
         val buttonZone2: Button = findViewById(R.id.buttonZone2)
 
-        buttonZone1.setOnClickListener(View.OnClickListener {
+        buttonZone1.setOnClickListener {
             val intent = Intent(application, GroupActivity::class.java)
             val options = ActivityOptions.makeSceneTransitionAnimation(this,findViewById(R.id.layout_header),"TopBar").toBundle()
             startActivity(intent,options)
-        })
-        buttonZone2.setOnClickListener(View.OnClickListener {
-            //val intent = Intent(application, CreateActivity::class.java)
-            //startActivity(intent)
-        })
-
+        }
+        buttonZone2.setOnClickListener {
+            val intent = Intent(application, CategoriesActivity::class.java)
+            val options = ActivityOptions.makeSceneTransitionAnimation(this,findViewById(R.id.layout_header),"TopBar").toBundle()
+            startActivity(intent, options)
+        }
     }
 }

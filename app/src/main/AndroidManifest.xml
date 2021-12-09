@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="fr.epsi.thefinalproject">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".AppFinalProject"
         android:allowBackup="true"
@@ -10,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TheFinalProject">
+        <activity
+            android:name=".CategoriesActivity"
+            android:exported="false" />
         <activity
             android:name=".StudentActivity"
             android:exported="false" />

@@ -9,4 +9,6 @@
     <string name="txt_zone_group">Group</string>
     <string name="yoann">Yoann</string>
     <string name="avatar_description">Student\'s avatar picture</string>
+    <string name="categories">Categories</string>
+    <string name="network_error">Http request failed to complete</string>
 </resources>
