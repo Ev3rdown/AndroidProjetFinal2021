@@ -1,21 +1,22 @@
 package fr.epsi.thefinalproject
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
+import android.app.ActivityOptions
 
 
-class CategoriesAdapter(val categories: ArrayList<Category>): RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
+class CategoriesAdapter(val categories: ArrayList<Category>,val currentActivity: Activity): RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
     // Define targets in the view
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textViewCategoryTitle = view.findViewById<TextView>(R.id.textViewCategoryTitle)
-        val contentLayout = view.findViewById<LinearLayout>(R.id.contentLayoutCategory)
+        val buttonCategoryTitle = view.findViewById<TextView>(R.id.buttonCategoryTitle)
     }
 
     // Create new views (invoked by the layout manager)
@@ -28,9 +29,13 @@ class CategoriesAdapter(val categories: ArrayList<Category>): RecyclerView.Adapt
     // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val category = categories.get(position)
-        viewHolder.textViewCategoryTitle.text= category.title
-        viewHolder.contentLayout.setOnClickListener {
-            (viewHolder.contentLayout.context.applicationContext as AppFinalProject).showToast(category.title)
+        viewHolder.buttonCategoryTitle.text= category.title
+        viewHolder.buttonCategoryTitle.setOnClickListener {
+            val intent = Intent(currentActivity, ProductsActivity::class.java)
+            val options = ActivityOptions.makeSceneTransitionAnimation(currentActivity,currentActivity.findViewById(R.id.layout_header),"TopBar").toBundle()
+            intent.putExtra("products_url",category.products_url)
+            intent.putExtra("title",category.title)
+            currentActivity.startActivity(intent, options)
         }
     }
 

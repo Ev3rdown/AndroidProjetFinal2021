@@ -2,6 +2,7 @@ package fr.epsi.thefinalproject
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import okhttp3.*
@@ -17,8 +18,8 @@ class CategoriesActivity : BaseActivity() {
         val categories = arrayListOf<Category>()
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewCategories)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        val studentAdapter = CategoriesAdapter(categories)
-        recyclerView.adapter = studentAdapter
+        val categoryAdapter = CategoriesAdapter(categories,this)
+        recyclerView.adapter = categoryAdapter
 
         val okHttpClient: OkHttpClient = OkHttpClient.Builder().build()
         val mRequestURL ="https://djemam.com/epsi/categories.json"
@@ -28,7 +29,7 @@ class CategoriesActivity : BaseActivity() {
 
         okHttpClient.newCall(request).enqueue(object : Callback{
             override fun onFailure(call: Call, e: IOException) {
-                (application as AppFinalProject).showToast(getString(R.string.network_error))
+                Log.d("Error", e.toString())
             }
 
             @SuppressLint("NotifyDataSetChanged")
@@ -44,12 +45,10 @@ class CategoriesActivity : BaseActivity() {
                         categories.add(cat)
                     }
                     runOnUiThread{
-                        studentAdapter.notifyDataSetChanged()
+                        categoryAdapter.notifyDataSetChanged()
                     }
                 }
             }
         })
-
-
     }
 }

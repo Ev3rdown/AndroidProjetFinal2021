@@ -11,7 +11,7 @@
     android:layout_gravity="center_horizontal"
     android:gravity="center_horizontal">
     <Button
-        android:id="@+id/textViewCategoryTitle"
+        android:id="@+id/buttonCategoryTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
