@@ -10,4 +10,5 @@
     <string name="avatar_description">Student\'s avatar picture</string>
     <string name="categories">Categories</string>
     <string name="network_error">Http request failed to complete</string>
+    <string name="image_of_product">Image of the product</string>
 </resources>
