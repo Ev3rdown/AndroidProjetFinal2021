@@ -39,13 +39,13 @@ class ProductsAdapter(val products: ArrayList<Product>,val currentActivity: Acti
         viewHolder.textViewProductCellDescription.text= product.description
         Picasso.get().load(product.picture_url).into(viewHolder.imageViewProductCell)
         viewHolder.contentLayoutProductCellClickable.setOnClickListener {
-            (viewHolder.contentLayoutProductCell.context.applicationContext as AppFinalProject).showToast(product.name)
-            val intent = Intent(currentActivity, ProductsActivity::class.java)// tttttttttt
+            //(viewHolder.contentLayoutProductCell.context.applicationContext as AppFinalProject).showToast(product.name)
+            val intent = Intent(currentActivity, ProductActivity::class.java)
             val options = ActivityOptions.makeSceneTransitionAnimation(currentActivity,currentActivity.findViewById(R.id.layout_header),"TopBar").toBundle()
-            intent.putExtra("products_url",product.picture_url)
-            intent.putExtra("title",product.name)
+            intent.putExtra("picture_url",product.picture_url)
+            intent.putExtra("name",product.name)
             intent.putExtra("description",product.description)
-            //currentActivity.startActivity(intent, options)
+            currentActivity.startActivity(intent, options)
         }
     }
 
