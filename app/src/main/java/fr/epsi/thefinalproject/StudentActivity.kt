@@ -2,6 +2,7 @@ package fr.epsi.thefinalproject
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -16,6 +17,10 @@ class StudentActivity : BaseActivity() {
         val textViewName = findViewById<TextView>(R.id.textViewStudentName)
         val textViewMail = findViewById<TextView>(R.id.textViewStudentMail)
         val textViewGroup = findViewById<TextView>(R.id.textViewStudentGroup)
+        val textViewStudentHyperlinkEpsi = findViewById<TextView>(R.id.textViewStudentHyperlinkEpsi)
+
+        textViewStudentHyperlinkEpsi.movementMethod = LinkMovementMethod.getInstance()
+        textViewStudentHyperlinkEpsi.setLinkTextColor(getColor(R.color.purple_500))
 
         intent.getSerializableExtra("student")?.let{ it ->
             val student: Student = it as Student

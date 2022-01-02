@@ -48,5 +48,15 @@
         android:textSize="18sp"
         />
 
+    <TextView
+        android:id="@+id/textViewStudentHyperlinkEpsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hyperlink_epsi"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        android:textColor="@color/design_default_color_primary"
+        />
+
 
 </LinearLayout>

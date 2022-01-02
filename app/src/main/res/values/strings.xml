@@ -11,4 +11,5 @@
     <string name="categories">Categories</string>
     <string name="network_error">Http request failed to complete</string>
     <string name="image_of_product">Image of the product</string>
+    <string name="hyperlink_epsi" translatable="false"><a href="https://www.epsi.fr/">epsi.fr</a></string>
 </resources>
